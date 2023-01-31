@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/back.jpg);
+    /* background-image: url(images/back.jpg); */
     background-size: cover;
     background-position: center;
 }
@@ -34,6 +34,17 @@ nav{
     width: 140px;
 }
 
+.myimg{
+    width:300px;
+    height:300px;
+    background-position-x: right;
+    object-fit:cover;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 10%;
+  }
+
+
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -52,7 +63,7 @@ nav ul li a::after{
     content: '';
     width: 100%;
     height: 3px;
-    background: #ff004f;
+    background: slategrey;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -62,4 +73,78 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
     width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    margin-left: 30%;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20%;
+}
+
+.header-text h1 span{
+    color: slategrey;
+}
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    border-radius: 20px;
+    position: relative;
+  }
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tab-links::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: slategrey;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
 }
